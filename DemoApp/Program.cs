@@ -18,3 +18,31 @@ class Program
             .UsePlatformDetect()
             .LogToTrace();
 }
+
+
+class TextEditor
+{
+    
+}
+
+public class Utilities
+{
+    public Utilities()
+    {
+        
+    }
+
+    public static string date_string(bool useUtc = false)
+    {
+        // DateTime dt = new DateTime();
+        var dt = useUtc ? DateTime.UtcNow : DateTime.Now;
+        return dt.ToString("yyyy-MM-dd-HHmmss");
+    }
+}
+
+
+
+
+
+
+

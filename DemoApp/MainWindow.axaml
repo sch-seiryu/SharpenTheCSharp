@@ -1,9 +1,19 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DemoApp.MainWindow"
-        Title="DemoApp">
-    Welcome to Avalonia!
+        Title="DemoApp"
+        Width="600" Height="450">
+    <!-- Welcome to Avalonia! -->
+
+    <Panel>
+        <Grid ColumnDefinitions="200, 1.5*, 4*" RowDefinitions="Auto, Auto, Auto" Margin="4">
+            <Button Name="DateStringButton" 
+                    Click="date_String_Now_Button_Click"
+                    Grid.Row="0" Grid.Column="0">Print Date String!</Button>
+            <Button Name="DateStringUtcButton" 
+                    Click="date_String_UTCNow_Button_Click"
+                    Grid.Row="1" Grid.Column="0">Print UTC Date String!</Button>
+        </Grid>
+    </Panel>
+    
 </Window>
