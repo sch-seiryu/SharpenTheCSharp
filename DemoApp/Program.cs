@@ -34,8 +34,8 @@ public class Utilities
 
     public static string date_string(bool useUtc = false)
     {
-        // DateTime dt = new DateTime();
-        var dt = useUtc ? DateTime.UtcNow : DateTime.Now;
+        // DateTime dt = new DateTime();  // {demo} This instantiate an instance just with initial values, either 0 or 1. 
+        var dt = useUtc ? DateTime.UtcNow : DateTime.Now; // {demo} Using ternary operator
         return dt.ToString("yyyy-MM-dd-HHmmss");
     }
 }
