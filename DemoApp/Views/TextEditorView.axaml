@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DemoApp.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="560"
+             x:Class="DemoApp.Views.TextEditorView"
+             x:DataType="vm:TextEditorViewModel">
+    <Grid ColumnDefinitions="1*, 1*" RowDefinitions="1*, 1*, 1*">
+        <RadioButton IsChecked="{Binding SampleMode }"
+                     Grid.Row="0" Grid.Column="0"
+                     GroupName="EditorModeGroup"
+                     Content="Sample"/>
+        <RadioButton IsChecked="{Binding EditorMode }"
+                     Grid.Row="0" Grid.Column="1"
+                     GroupName="EditorModeGroup"
+                     Content="Edit"/>
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                 Text="{Binding Texts}"
+                 />
+    </Grid>
+</UserControl>

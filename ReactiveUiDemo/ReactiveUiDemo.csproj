@@ -9,6 +9,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Folder Include="Models\" />
+        <AvaloniaResource Include="Assets\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <ProjectCapability Include="Avalonia" />
         <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
     </ItemGroup>
@@ -19,14 +24,6 @@
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.21" />
         <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.21" />
-        <PackageReference Include="ScottPlot.Avalonia" Version="4.1.64" />
         <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Views\MainWindow.axaml.cs">
-        <DependentUpon>MainWindow.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
     </ItemGroup>
 </Project>

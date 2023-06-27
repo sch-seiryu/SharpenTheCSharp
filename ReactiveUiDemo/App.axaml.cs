@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using DemoApp.Services;
-using DemoApp.ViewModels;
+using ReactiveUiDemo.ViewModels;
+using ReactiveUiDemo.Views;
 
-namespace DemoApp;
+namespace ReactiveUiDemo;
 
 public partial class App : Application
 {
@@ -15,19 +15,14 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
-        // base.OnFrameworkInitializationCompleted();
-        
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            // {demo} Creating temporary database to mock DB based text files
-            // var db = new Database();
-            
-            desktop.MainWindow = new Views.MainWindow 
+            desktop.MainWindow = new MainWindow
             {
-                    DataContext = new MainWindowViewModel(),
+                DataContext = new MainWindowViewModel(),
             };
         }
-        
+
         base.OnFrameworkInitializationCompleted();
     }
 }
