@@ -1,0 +1,76 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+        xmlns:app="clr-namespace:DemoApp"
+        xmlns:vm="using:DemoApp.ViewModels"
+        xmlns:scottPlot="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
+        x:Class="DemoApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="DemoApp"
+        Width="800" Height="560">
+        
+        <TabControl>
+                <TabItem Header="Sample/Intro">
+                        <Grid ColumnDefinitions="1*" RowDefinitions="0.2*, Auto, 1*" Margin="4">
+                        <!-- <Grid ColumnDefinitions="1*, Auto" RowDefinitions="Auto, Auto, Auto, 1*" Margin="4"> -->
+                        <!--         ~1~ <Button Name="DateStringButton"  @1@ -->
+                        <!--         ~1~         Click="date_String_Now_Button_Click" @1@ -->
+                        <!--         ~1~         Grid.Row="0" Grid.Column="0">Print Date String!</Button> @1@ -->
+                        <!--         <Button Name="DateStringButton"  -->
+                        <!--                 Command="{Binding DateStringButtonClicked }" -->
+                        <!--                 Grid.Row="0" Grid.Column="0">Print Date String!</Button> -->
+                        <!--         <TextBlock Name="DateStringTextBlock" -->
+                        <!--                    Text="{Binding DateString }" -->
+                        <!--                    Grid.Row="0" Grid.Column="1"/> -->
+                        <!--         ~1~ <Button Name="DateStringUtcButton"  @1@ -->
+                        <!--         ~1~         Click="date_String_UTCNow_Button_Click" @1@ -->
+                        <!--         ~1~         Grid.Row="1" Grid.Column="0">Print UTC Date String!</Button> @1@ -->
+                        <!--         <Button Name="DateStringUtcButton"  -->
+                        <!--                 Command="{Binding DateStringUtcButtonClicked }" -->
+                        <!--                 Grid.Row="1" Grid.Column="0">Print UTC Date String!</Button> -->
+                        <!--         <TextBlock Name="DateStringUtcTextBlock" -->
+                        <!--                 Text="{Binding DateStringUtc }" -->
+                        <!--                 Grid.Row="1" Grid.Column="1"/> -->
+                                <rxui:RoutedViewHost Grid.Row="0" Grid.Column="0" Router="{Binding Router}" >
+                                        <rxui:RoutedViewHost.DefaultContent>
+                                                <TextBlock Text="Default content"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center" />
+                                                <!--         <UserControl Content="{Binding FirstPageView }" /> -->
+                                        </rxui:RoutedViewHost.DefaultContent>
+                                        <rxui:RoutedViewHost.ViewLocator>
+                                                <app:AppViewLocator />
+                                        </rxui:RoutedViewHost.ViewLocator>
+                                </rxui:RoutedViewHost>
+                                <Button Name="ShowGraphButton" 
+                                        Click="show_Graph_Button_Click"
+                                        Grid.Row="1" Grid.Column="0">show graph!</Button>
+                                <scottPlot:AvaPlot Grid.Row="2" Grid.Column="0" Name="AvaPlot1"/>
+                        </Grid>
+                </TabItem>
+                <TabItem Header="Editor">
+                        <!-- <Window.DataContext> -->
+                        <!--         <vm:TextEditorViewModel /> -->
+                        <!--                 ~1~ <ContentControl Content="{Binding Texts }"/> @1@ -->
+                        <!--         ~1~ </vm:TextEditorViewModel> @1@ -->
+                        <!-- </Window.DataContext> -->
+                        <StackPanel>
+                                <!-- Name="SampleTextListComboBox#TODO:BindLater" -->
+                                <ComboBox SelectedIndex="0">
+                                        <ComboBoxItem>TestItem1</ComboBoxItem>
+                                        <ComboBoxItem>TestItem2</ComboBoxItem>
+                                        <ComboBoxItem>TestItem3</ComboBoxItem>
+                                        <ComboBoxItem>TestItem4</ComboBoxItem>
+                                </ComboBox>
+                                <!-- <TextBlock Text="{Binding UrlPathSegment}" /> -->
+                        </StackPanel>
+                </TabItem>
+                <TabItem Header="Graph">
+                        <TextBlock>COMING SOON</TextBlock>
+                </TabItem>
+                <TabItem Header="Printing">
+                        <TextBlock>COMING SOON</TextBlock>
+                </TabItem>
+        </TabControl>
+        <!-- <scottPlot:AvaPlot Name="AvaPlot1"/> -->
+</Window>

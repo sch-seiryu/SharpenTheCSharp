@@ -1,0 +1,6 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        MinWidth="590" MinHeight="400"
+>
+    Welcome to Avalonia!
+</Window>

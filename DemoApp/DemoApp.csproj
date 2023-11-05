@@ -29,4 +29,8 @@
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="View\MainWindow.axaml" />
+    </ItemGroup>
 </Project>

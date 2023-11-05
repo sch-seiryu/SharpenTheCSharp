@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using DemoApp.ViewModels;
-using DemoApp.Views;
+using ReactiveUiDemo.ViewModels;
+using ReactiveUiDemo.Views;
 
-namespace DemoApp;
+namespace ReactiveUiDemo;
 
 public partial class App : Application
 {
