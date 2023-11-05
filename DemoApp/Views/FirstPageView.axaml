@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:DemoApp.ViewModels"
+             x:Class="DemoApp.Views.FirstPageView"
+             x:DataType="vm:FirstPageViewModel">
+    <!-- <Grid ColumnDefinitions="1*, Auto" RowDefinitions="1*, 1*"> -->
+    <!--     <Button Name="DateStringButton"  -->
+    <!--             Command="{Binding DateStringButtonClicked }" -->
+    <!--             Grid.Row="0" Grid.Column="0">Print Date String!</Button> -->
+    <!--     <TextBlock Name="DateStringTextBlock" -->
+    <!--                Text="{Binding DateString }" -->
+    <!--                Grid.Row="0" Grid.Column="1"/> -->
+    <!--     ~1~ <Button Name="DateStringUtcButton"  @1@ -->
+    <!--     ~1~         Click="date_String_UTCNow_Button_Click" @1@ -->
+    <!--     ~1~         Grid.Row="1" Grid.Column="0">Print UTC Date String!</Button> @1@ -->
+    <!--     <Button Name="DateStringUtcButton"  -->
+    <!--             Command="{Binding DateStringUtcButtonClicked }" -->
+    <!--             Grid.Row="1" Grid.Column="0">Print UTC Date String!</Button> -->
+    <!--     <TextBlock Name="DateStringUtcTextBlock" -->
+    <!--                Text="{Binding DateStringUtc }" -->
+    <!--                Grid.Row="1" Grid.Column="1"/> -->
+    <!-- </Grid> -->
+    "Please leave me alone."
+</UserControl>
