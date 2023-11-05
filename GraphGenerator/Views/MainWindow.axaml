@@ -1,0 +1,81 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GraphGenerator.ViewModels"
+        xmlns:views="clr-namespace:GraphGenerator.Views"
+        x:Class="GraphGenerator.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="GraphGenerator"
+        Height="560"
+        Width="720"
+        >
+        <!-- Name="TheMainWindow" -->
+        <!-- xmlns:d="http://schemas.microsoft.com/expression/blend/2008" -->
+        <!-- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" -->
+        <!-- mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="360" -->
+
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <!-- <Design.DataContext> -->
+    <!--     <vm:MainWindowViewModel/> -->
+    <!-- </Design.DataContext> -->
+
+    <!-- <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+
+    <ScrollViewer>
+        <StackPanel
+            Spacing="4"
+            MaxHeight="1050"
+            >
+            <!-- MaxHeight="{Binding #TheMainWindow.Height}" -->
+        <!-- VerticalAlignment="Stretch" -->
+        <!-- HorizontalAlignment="Stretch" -->
+        
+            <!-- ListBox approach -->
+            <!--<ListBox>
+            </ListBox>-->
+            
+            <!-- <views:GraphTemplateView -->
+            <!--     Background="Aqua" -->
+            <!--     VerticalAlignment="Stretch" -->
+            <!--     HorizontalAlignment="Stretch" -->
+            <!--     /> -->
+                <!-- MinHeight="250" -->
+                <!-- MinWidth="250" -->
+            
+            <ItemsControl
+                Name="GraphTemplates"
+                ItemsSource="{Binding Graphs}"
+                >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <views:GraphTemplateView Margin="2"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
+            <ItemsControl
+                Name="ShortCutTemplates"
+                ItemsSource="{Binding ShortCuts}"
+                >
+               <ItemsControl.ItemsPanel>
+                  <ItemsPanelTemplate>
+                      <StackPanel />
+                  </ItemsPanelTemplate>
+               </ItemsControl.ItemsPanel>
+            
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <views:ShortCutTemplateView Margin="2"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        
+        </StackPanel>
+    </ScrollViewer>
+</Window>

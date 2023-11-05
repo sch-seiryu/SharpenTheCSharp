@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using DemoApp.ViewModel;
-using DemoApp.View;
+using GraphGenerator.ViewModels;
+using GraphGenerator.Views;
 
-namespace DemoApp;
+namespace GraphGenerator;
 
 public partial class App : Application
 {

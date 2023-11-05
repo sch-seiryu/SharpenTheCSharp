@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:scottPlot="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
+             xmlns:vm="using:GraphGenerator.ViewModels"
+             x:Class="GraphGenerator.Views.GraphTemplateView"
+             >
+             <!-- x:DataType="vm:GraphTemplateViewModel" -->
+             <!-- VerticalAlignment="Stretch" -->
+             <!-- xmlns:d="http://schemas.microsoft.com/expression/blend/2008" -->
+             <!-- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" -->
+             <!-- mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" -->
+             
+    <StackPanel
+        Spacing="5"
+        >
+        <!-- VerticalAlignment="Stretch" -->
+        <!-- MinHeight="300" -->
+        <!-- MinWidth="300" -->
+             
+        <TextBlock 
+            Name="TitleTextBlock"
+            MinHeight="100"
+            MinWidth="200"
+            />
+            <!-- Text="{Binding PlotTitle}" -->
+            <!-- VerticalAlignment="Center" -->
+        
+        <scottPlot:AvaPlot
+            Name="NamedPlot"
+            MinHeight="100"
+            />
+            <!-- MinWidth="300" -->
+            <!-- MinHeight="300" -->
+        
+        <ContentControl 
+            MinHeight="100"
+            MinWidth="200"
+            />     
+            <!-- Content="{Binding PlotContent}" -->
+        
+    </StackPanel>
+</UserControl>

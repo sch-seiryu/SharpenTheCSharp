@@ -1,0 +1,18 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="GraphGenerator.App"
+             xmlns:local="using:GraphGenerator">
+
+    <Application.Styles>
+        <!-- <FluentTheme Mode="Light"/> -->
+        <FluentTheme />
+    </Application.Styles>
+    <!-- <Application.DataTemplates> -->
+    <!--     <!- -  -->
+    <!--     망할 레퍼런스에 따르면 'ViewLocator.cs'를 솔루션이 프로젝트 생성시에 만들어준다던데 여태 봐온 바로는 그런거 없던데? 너네 문서 업데이트한 거 맞음? -->
+    <!--     심지어 AppViewLocator가 아니라 그냥 ViewLocator인거 맞긴 한거야? -->
+    <!--     https://docs.avaloniaui.net/docs/next/tutorials/music-store-app/album-view#view-locator  -->
+    <!--     - -> -->
+    <!--     ~1~ <local:ViewLocator /> @1@ -->
+    <!-- </Application.DataTemplates> -->
+</Application>
